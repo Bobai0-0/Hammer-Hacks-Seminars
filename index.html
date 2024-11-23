@@ -7,7 +7,7 @@ DOCTYPE html>
         width: 600px 
         Height: auto
         }
-      h1{ 
+      h1{ color: blueviolet;
         }
     </style>
   </head>
@@ -15,19 +15,26 @@ DOCTYPE html>
     <h1>My Cool Website</h1>
     <p>I think hmtl is neat!</p>
 
-    <img src=>
+    <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmmDy__PhtItvV1ptx7GyQDyBJ2wwNI0PJGw&s>
 
     <blockquote> "I looked like this when I was young, and I still...</blockquote>
-    <button
+    <button onclick="changeQuote()">Change Quote!</button>
     <script> 
       var index = 0;
       function changeQuote(){
         var quotes = [
           '"I really like web development!" -Dave Smith-Hates',
           '"I hate web development!" -Ivy Zhang"',
-          '"Dumptrucks!"'
+          '"Dumptrucks!"',
+          '"BOBA!!!!"'
           ];
         var blockquote = document.querySelector("blockquote");
+        blockquote.innerHTML = quotes[index];
+
+        index++;
+        if (index >= 4){
+          index = 0;
+        }
       
       }
     </script>
